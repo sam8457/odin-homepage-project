@@ -50,10 +50,32 @@ h4 {
 
 .titlecard {
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas:
+        "img hed"
+        "img par"
+        "par par"
+        "lnk lnk";
     height: 15rem;
     align-items: center;
+    background-color: white;
+    box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 0.2);
+}
+
+.titlecard > #image_container {
+    grid-area: img;
+}
+
+.titlecard > #header {
+    grid-area: hed;
+}
+
+.titlecard > #bio {
+    grid-area: par;
+}
+
+.titlecard > #bio_links {
+    grid-area: lnk;
 }
 
 #author_name {
@@ -70,16 +92,13 @@ h4 {
     box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 0.2);
 }
 
-.about_me {
-    background-color: white;
+/* .about_me {
     min-height: 12rem;
-    /* padding: 1rem; */
-    display: flex;
-    flex-direction: row;
-    box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 0.2);
-}
+    padding: 1rem;
+    
+} */
 
-.bio {
+/* .bio {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -101,12 +120,12 @@ h4 {
     display: flex;
     flex-direction: row;
     justify-content: end;
-}
+} */
 
-.about_me * ul > li {
+/* .about_me * ul > li {
     margin-left: 1rem;
     font-size: 1.5rem;
-}
+} */
 
 .main {
     display: flex;
