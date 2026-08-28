@@ -238,3 +238,12 @@ h4 {
 #portrait_distant {
     max-width: 30rem;
 }
+
+/* @media (max-width: 1000px) {
+
+    #portrait_closeup {
+        float: left;
+        border: 5px dotted red;
+    }
+
+} */
