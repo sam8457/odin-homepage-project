@@ -226,6 +226,17 @@ h4 {
     background-color: lightblue;
 }
 
+.footer img.icon {
+    height: 1.4rem;
+    transform: translateY(0.3rem);
+    justify-self: center;
+    filter: invert(100%);
+}
+
+.footer p.icon_description {
+    align-self: start;
+}
+
 #description > * {
     margin-bottom: 1rem;
     margin-right: 1rem;
