@@ -5,18 +5,6 @@
     box-sizing: border-box;
 }
 
-/* body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
-}
-
-body > * {
-    max-width: 60rem;
-    width: 100vw;
-} */
-
 body {
     display: flex;
     align-items: center;
@@ -356,6 +344,8 @@ h4 {
         visibility: visible;
         position: relative;
         /* background-color: red; */
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     .medium_header {
@@ -363,57 +353,74 @@ h4 {
         position: absolute;
     }
 
+    .header::before {
+        top: -150%;
+    }
+
+    .titlecard {
+        height: auto;
+        position: relative;
+    }
+
+    .bio {
+        padding-top: 0;
+        margin: 0;
+    }
+
+    .bio p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
     .about_me {
         flex-direction: column;
+        align-items: center;
         background-color: transparent;
-        
+        box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 0);
+        text-align: center;
+    }
+
+    .about_me > div {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #portrait_closeup {
+        transform: scale(1);
+        transform-origin: center;
+        max-height: none;
+        width: 80vw;
+    }
+
+    #author_name {
+        text-align: center;
+        position: relative;
+        transform: translate(0, -6rem);
+    }
+    
+    .main {
+        padding-top: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #portrait_distant {
+        max-height: auto;
+        width: 100vw;
+    }
+
+    #portrait_distant > img {
+        display: block;
+        justify-self: center;
+        width: 100%;
+        height: auto;
+        max-height: 100000px;
     }
 }
-
-/* For reference only, delete when done: */
-/* #author_name { 
-    position: absolute;
-    color: white;
-    transform: translate(-0.75rem, -2.75rem);
-    font-size: 3rem;
-    font-family: "Playfair Display", serif;;
-}
-
-#portrait_closeup {
-    max-height: 15rem;
-    transform: scale(1.25);
-    box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 0.2);
-}
-
-.about_me {
-    background-color: white;
-    min-height: 12rem;
-    /* padding: 1rem; */
-    display: flex;
-    flex-direction: row;
-    box-shadow: 3px 3px 3px 0px rgb(0 0 0 / 0.2);
-}
-
-.bio {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 3rem;
-    margin-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.bio > h3 {
-    font-weight: lighter;
-    font-size: 2rem;
-}
-
-.about_me > .bio > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-} */
